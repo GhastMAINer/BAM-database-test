@@ -1044,7 +1044,7 @@
             }
         </style>
 		
-		  <script>
+<script>
         document.getElementById('form01').addEventListener('submit', function(event) {
             event.preventDefault(); // Prevent the form from submitting normally
 
@@ -1056,7 +1056,7 @@
             });
 
             // Send data to Zapier webhook
-            fetch('https://hooks.zapier.com/hooks/catch/12786217/2hiih2a/', {
+            fetch('YOUR_WEBHOOK_URL', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -1066,11 +1066,11 @@
             .then(response => response.json())
             .then(result => {
                 console.log('Success:', result);
-                // Optionally, you can show a success message or redirect the user
+                // Optionally, show a success message or handle the response
             })
             .catch(error => {
                 console.error('Error:', error);
-                // Optionally, you can show an error message
+                // Optionally, show an error message
             });
         });
     </script>
@@ -1103,7 +1103,7 @@
                             <span style="color: #ffffff">Under</span> Development
                         </strong>
                     </p>
-                    <form enctype="multipart/form-data" id="form01" method="post">
+<form enctype="multipart/form-data" id="form01" method="post">
         <div class="inner">
             <div class="field" data-type="text">
                 <input type="text" name="name" id="form01-name" placeholder="Name" maxlength="256" required/>
